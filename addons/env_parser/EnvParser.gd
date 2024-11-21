@@ -29,13 +29,8 @@ func parse(key: String) -> String:
 	var line: String = ""
 	
 	for l: String in lines:
-		if l.contains(key):
-			line = l
+		if l.split("=")[0] == key:
+			return l.split("=")[1]
 	
-	if line == "":
-		push_warning(key, " seems to have an empty value or does not exist.")
-		return line
-	
-	var value: String = ""
-	value = line.split("=")[1]
-	return value
+	push_warning(key, " seems to have an empty value or does not exist.")
+	return line

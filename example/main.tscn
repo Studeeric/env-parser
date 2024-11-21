@@ -20,4 +20,4 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Hey"
 script = ExtResource("1_pew37")
-env_key = "PASSWORD"
+env_key = "FAKE_PASSWORD"
